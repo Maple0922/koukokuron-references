@@ -47,8 +47,9 @@
   .select {
     background-color: $white;
     width: 84%;
-    overflow-x: scroll;
     display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
 
     &.class-select {
       .selected {

@@ -81,8 +81,9 @@ a, input, button, textarea, select, option {
   .sub-header .select {
     background-color: #fcfcfc;
     width: 84%;
+    display: flex;
     overflow-x: scroll;
-    display: flex; }
+    overflow-y: hidden; }
     .sub-header .select.class-select .selected {
       background: #9090ff; }
     .sub-header .select.number-select .selected {
