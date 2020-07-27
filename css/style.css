@@ -85,9 +85,9 @@ a, input, button, textarea, select, option {
     overflow-x: scroll;
     overflow-y: hidden; }
     .sub-header .select.class-select .selected {
-      background: #9090ff; }
+      background: #c8c8ff; }
     .sub-header .select.number-select .selected {
-      background: #ff9090; }
+      background: #ffc8c8; }
     .sub-header .select li {
       height: 32px;
       line-height: 30px;
