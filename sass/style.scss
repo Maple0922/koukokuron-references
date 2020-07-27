@@ -6,26 +6,98 @@
   height: $height-header;
   width: 100%;
   padding: 0 30px;
-  background: $white;
-  box-shadow: $basic-shadow;
-  position: relative;
+  background: $super-dark-gray;
+  color: $white;
+  border-bottom: 3px solid $super-dark-gray;
+  position: fixed;
+  top: 0;
   &__title {
     font-size: 2.4rem;
     line-height: $height-header;
   }
 }
 
+.sub-header {
+  height: 40px;
+  border-bottom: 1px solid $light-gray;
+  display: flex;
+  position: fixed;
+  width: 100%;
+
+  &.class {
+    top: $height-header;
+  }
+
+  &.number {
+    top: calc(#{$height-header} + 40px);
+    box-shadow: $basic-shadow;
+  }
+
+  font-size: 1.8rem;
+  line-height: 40px;
+
+  .title {
+    width: 16%;
+    border-right: 3px double $light-gray;
+    color: $white;
+    background: $dark-gray;
+    text-align: center;
+  }
+
+  .select {
+    background-color: $white;
+    width: 84%;
+    overflow-x: scroll;
+    display: flex;
+
+    &.class-select {
+      .selected {
+        background: rgb(144, 144, 255);
+      }
+    }
+
+    &.number-select {
+      .selected {
+        background: rgb(255, 144, 144);
+      }
+    }
+
+    li {
+      height: 32px;
+      line-height: 30px;
+      border: 1px solid $light-gray;
+      border-radius: 8px;
+      padding: 0 10px;
+      margin: 4px 2px;
+      text-align: center;
+      white-space: nowrap;
+
+      span {
+        font-size: 1.0rem;
+        color: $dark-gray;
+        pointer-events: none;
+      }
+
+    }
+  }
+}
+
 .main {
-  min-height: $height-main;
   background: $super-light-gray;
-  padding: 30px;
+  padding: 16px;
+  margin-top: calc(#{$height-header} + 80px);
   font-size: 1.6rem;
   &__container {
     background: $white;
-    padding: 16px 24px;
-    margin-bottom: 20px;
+    padding: 16px;
     border-radius: 6px;
     box-shadow: $basic-shadow;
+    font-size: 0;
+
+    .image {
+      width: 100%;
+      border-radius: 6px;
+    }
   }
 }
 

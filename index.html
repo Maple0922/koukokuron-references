@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>newsite</title>
+  <title>広告論 資料</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="icon/favicon.ico">
   <link rel="apple-touch-icon" href="icon/favicon.ico">
@@ -11,14 +11,32 @@
   <script type="text/javascript" src="js/jquery.js"></script>
 </head>
 <body>
-  <header class="header">
-    <h1 class="header__title">title</h1>
-  </header>
-  <main class="main">
-    <div class="main__container">
-      main
+  <div id="app">
+    <header class="header">
+      <h1 class="header__title">広告論 資料</h1>
+    </header>
+    <div class="sub-header class">
+      <p class="title">Class</p>
+      <ul class="select class-select">
+        <li v-for="reference in references" v-on:click="classSelect" :key="reference.id" :class="{ selected:reference.selected }">
+          {{ reference.id }} <span>(第{{ reference.num }}回)</span>
+        </li>
+      </ul>
     </div>
-  </main>
+    <div class="sub-header number">
+      <p class="title">No.</p>
+      <ul class="select number-select">
+        <li v-for="n of imageCount" v-on:click="numberSelect" :key='n' :class="{ selected:n==1 }">
+          {{ n }}
+        </li>
+      </ul>
+    </div>
+    <main class="main">
+      <div class="main__container">
+        <img :src="imageUrl" class="image" alt="">
+      </div>
+    </main>
+  </div>
   <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
